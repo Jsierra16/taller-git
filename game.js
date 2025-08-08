@@ -31,20 +31,7 @@ function askGuess() {
     }
 
     
-    const currentDiff = Math.abs(secretNumber - guess);
-
-   
-    if (lastDifference === null) {
-      console.log(currentDiff <= 10 ? "Caliente" : "Frío");
-    } else {
-      if (currentDiff < lastDifference) {
-        console.log("¡Más caliente!");
-      } else if (currentDiff > lastDifference) {
-        console.log("¡Más frío!");
-      } else {
-        console.log("Igual de lejos que antes.");
-      }
-    }
+ 
 
     
     lastDifference = currentDiff;
