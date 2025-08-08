@@ -8,7 +8,7 @@ const rl = readline.createInterface({
 });
 
 
-const secretNumber = Math.floor(Math.random() * 10) + 1;
+const secretNumber = Math.floor(Math.random() * 15) + 1;
 let lastDifference = null;
 
 console.log("Estoy pensando en un número del 1 al 10. ¿Puedes adivinar cuál es?");
@@ -18,8 +18,8 @@ function askGuess() {
     const guess = parseInt(input);
 
     
-    if (isNaN(guess) || guess < 1 || guess > 100) {
-      console.log("Por favor ingresa un número válido entre 1 y 10.");
+    if (isNaN(guess) || guess < 1 || guess > 15) {
+      console.log("Por favor ingresa un número válido entre 1 y 15.");
       return askGuess();
     }
 
@@ -35,7 +35,7 @@ function askGuess() {
 
    
     if (lastDifference === null) {
-      console.log(currentDiff <= 10 ? "Caliente" : "Frío");
+      console.log(currentDiff <= 15 ? "Caliente" : "Frío");
     } else {
       if (currentDiff < lastDifference) {
         console.log("¡Más caliente!");
